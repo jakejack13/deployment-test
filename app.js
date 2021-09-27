@@ -6,4 +6,5 @@ const requestListener = function (req, res) {
 }
 
 const server = http.createServer(requestListener);
+console.log(server.address());
 server.listen(8080);
