@@ -1,14 +1,14 @@
 version: v1.0
-name: Test MyApp
+name: Production
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Test
+  - name: Run
     task:
       jobs:
-        - name: Test
+        - name: Run
           commands:
             - checkout
             - sem-version node 12
@@ -16,9 +16,4 @@ blocks:
             - npm install
             - cache store
             - npm run build --if-present
-            - npm test
-promotions:
-  - name: prod
-    pipeline_file: prod.yml
-    auto_promote:
-      when: branch = 'main' AND result = 'passed'
+            - npm start
