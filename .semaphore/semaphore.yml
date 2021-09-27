@@ -11,4 +11,10 @@ blocks:
         - name: docker build
           commands:
             - checkout
-            - docker build -t your-image .
+            - docker build -t test .
+  - name: Run
+    task:
+      jobs:
+        - name: docker run
+          commands:
+            - docker run -p 8080:8080 test
