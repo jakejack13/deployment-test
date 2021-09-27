@@ -3,9 +3,10 @@
     "version": "0.0.0",
     "description": "Test node server",
     "author": "Jacob Kerr <jck268@cornell.edu>",
-    "main": "test.js",
+    "main": "app.js",
     "scripts": {
-      "start": "node test.js"
+      "start": "node app.js",
+      "test": "node test.js"
     },
     "dependencies": {
       
