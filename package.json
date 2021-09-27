@@ -1,6 +1,6 @@
 {
     "name": "test_server",
-    "version": "a",
+    "version": "0.0.0",
     "description": "Test node server",
     "author": "Jacob Kerr <jck268@cornell.edu>",
     "main": "test.js",
