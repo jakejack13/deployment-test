@@ -1,14 +1,20 @@
 version: v1.0
-name: Docker
+name: Test MyApp
 agent:
   machine:
     type: e1-standard-2
     os_image: ubuntu1804
+
 blocks:
-  - name: Build
+  - name: Test
     task:
       jobs:
-        - name: docker build
+        - name: Test
           commands:
             - checkout
-            - docker build -t your-image .
+            - sem-version node 12
+            - cache restore
+            - npm install
+            - cache store
+            - npm run build --if-present
+            - npm test
