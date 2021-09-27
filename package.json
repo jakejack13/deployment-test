@@ -1,0 +1,13 @@
+{
+    "name": "test_server",
+    "version": "a",
+    "description": "Test node server",
+    "author": "Jacob Kerr <jck268@cornell.edu>",
+    "main": "test.js",
+    "scripts": {
+      "start": "node test.js"
+    },
+    "dependencies": {
+      
+    }
+  }
